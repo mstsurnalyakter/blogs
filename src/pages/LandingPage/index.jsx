@@ -1,19 +1,20 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Img, Heading, Button, Input } from "../../components";
+import { NavLink } from "react-router-dom";
 
 export default function LandingPagePage() {
   return (
     <>
       <Helmet>
-        <title>blog</title>
+        <title>blog || Home</title>
         <meta
           name="description"
           content="Web site created using create-react-app"
         />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[95px] bg-white-A700">
-        <header className="flex flex-row md:flex-col justify-between items-center w-full p-6 md:gap-10 sm:p-5 bg-white-A700">
+        {/* <header className="flex flex-row md:flex-col justify-between items-center w-full p-6 md:gap-10 sm:p-5 bg-white-A700">
           <div className="flex flex-row sm:flex-col justify-between items-center w-[55%] md:w-full ml-[139px] md:ml-5 sm:gap-10">
             <Img
               src="images/img_group_150.svg"
@@ -26,7 +27,7 @@ export default function LandingPagePage() {
                   as="h6"
                   className="!text-indigo-900_01 tracking-[0.12px] text-center"
                 >
-                  Home
+                  <NavLink to={"/"}>Home</NavLink>
                 </Heading>
                 <div className="h-px w-full bg-indigo-900_01" />
               </div>
@@ -52,7 +53,7 @@ export default function LandingPagePage() {
                 as="h6"
                 className="!text-indigo-200_01 tracking-[0.12px] text-center"
               >
-                Contact
+                <NavLink to={"/contactus"}>Contact</NavLink>
               </Heading>
             </div>
           </div>
@@ -61,7 +62,8 @@ export default function LandingPagePage() {
             alt="search_one"
             className="h-[30px] w-[30px] mr-[139px] md:mr-5"
           />
-        </header>
+        </header> */}
+
         <div className="flex flex-col items-center justify-start w-full gap-[159px] md:px-5 max-w-[1111px]">
           <div className="flex flex-row justify-center w-[93%] md:w-full">
             <div className="flex flex-col items-center justify-start w-full">
@@ -275,7 +277,11 @@ export default function LandingPagePage() {
                             </Text>
                           </div>
                         </div>
-                        <Text size="xs" as="p" className="flex text-center items-center gap-3">
+                        <Text
+                          size="xs"
+                          as="p"
+                          className="flex text-center items-center gap-3"
+                        >
                           <span className="text-blue_gray-600 ">Category </span>
                           <span className="text-pink-300 font-merriweather text-lg font-black">
                             Writing
@@ -391,7 +397,11 @@ export default function LandingPagePage() {
                             </Text>
                           </div>
                         </div>
-                        <Text size="xs" as="p" className="flex text-center items-center gap-2">
+                        <Text
+                          size="xs"
+                          as="p"
+                          className="flex text-center items-center gap-2"
+                        >
                           <span className="text-blue_gray-600">Category </span>
                           <span className="text-pink-300 font-merriweather text-lg font-black">
                             Writing
@@ -509,7 +519,11 @@ export default function LandingPagePage() {
                             </Text>
                           </div>
                         </div>
-                        <Text size="xs" as="p" className="flex text-center items-center gap-2">
+                        <Text
+                          size="xs"
+                          as="p"
+                          className="flex text-center items-center gap-2"
+                        >
                           <span className="text-blue_gray-600">Category </span>
                           <span className="text-pink-300 font-merriweather text-lg font-black">
                             Writing
@@ -846,7 +860,7 @@ export default function LandingPagePage() {
           </div>
         </div>
 
-        <footer className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center justify-center w-full">
           <div className="flex flex-row md:flex-col justify-evenly items-center w-[78%] mb-[377px] gap-[53px] py-[50px] md:py-5 bg-green-50 rounded-[5px]">
             <div className="flex flex-col items-start justify-start w-[46%] md:w-full">
               <Text as="p" className="!text-indigo-900_01">
@@ -894,83 +908,7 @@ export default function LandingPagePage() {
             </div>
           </div>
 
-          <div className="flex flex-row justify-end w-full  md:ml-0">
-            <div className="flex flex-row justify-center w-full p-[33px] sm:p-5 bg-gray-600_01">
-              <div className="flex flex-col items-center justify-start w-[81%] mt-[30px] gap-[66px] mx-[132px] md:mx-5">
-                <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
-                  <div className="flex flex-col items-start justify-start w-[15%] md:w-full gap-2">
-                    <div className="flex flex-row justify-start items-start gap-3.5">
-                      <Img
-                        src="images/img_dashicons_welcome_write_blog.svg"
-                        alt="dashicons_one"
-                        className="h-[24px] w-[24px] mt-[3px]"
-                      />
-                      <Heading
-                        size="lg"
-                        as="h4"
-                        className="!text-white-A700 !font-nunitosans uppercase text-center !font-extrabold"
-                      >
-                        Blogsly
-                      </Heading>
-                    </div>
-                    <div className="flex flex-row justify-start items-center gap-2.5">
-                      <Img
-                        src="images/img_heart_3_1.svg"
-                        alt="heart3one_one"
-                        className="h-[20px] w-[20px]"
-                      />
-                      <Text as="p" className="!text-white-A700 !font-medium">
-                        Build with heart
-                      </Text>
-                    </div>
-                  </div>
-                  <div className="flex flex-row justify-between w-auto gap-[50px]">
-                    <Text as="p" className="!text-white-A700">
-                      Home
-                    </Text>
-                    <Text as="p" className="!text-white-A700">
-                      Podcast
-                    </Text>
-                    <Text as="p" className="!text-white-A700">
-                      Blog
-                    </Text>
-                    <Text as="p" className="!text-white-A700">
-                      About
-                    </Text>
-                    <Text as="p" className="!text-white-A700">
-                      Contact
-                    </Text>
-                  </div>
-                  <div className="flex flex-col items-center justify-start w-[11%] md:w-full gap-[19px]">
-                    <Heading as="h6" className="!text-white-A700 text-center">
-                      Follow Me on
-                    </Heading>
-                    <div className="flex flex-row justify-between w-full">
-                      <Img
-                        src="images/img_instagram_3_1.svg"
-                        alt="instagram3one"
-                        className="h-[25px] w-[25px]"
-                      />
-                      <Img
-                        src="images/img_whatsapp_2_1.svg"
-                        alt="whatsapp2one"
-                        className="h-[25px] w-[25px]"
-                      />
-                      <Img
-                        src="images/img_linkedin_2_1.svg"
-                        alt="linkedin2one"
-                        className="h-[25px] w-[25px]"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <Text size="xs" as="p" className="!text-white-A700">
-                  Powered by Blogsly
-                </Text>
-              </div>
-            </div>
-          </div>
-        </footer>
+        </div>
       </div>
     </>
   );
