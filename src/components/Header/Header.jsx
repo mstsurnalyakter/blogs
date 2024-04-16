@@ -25,11 +25,17 @@ const Header = () => {
               </NavLink>
             </Heading>
             <Heading as="h6">Podcast</Heading>
-            <Heading
-              as="h6"
-              className="!text-indigo-200_01 tracking-[0.12px] text-center"
-            >
-              Blog
+            <Heading as="h6">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-b border-indigo-900_01 !text-indigo-900_01 tracking-[0.12px] text-center"
+                    : "!text-indigo-200_01 tracking-[0.12px] text-center"
+                }
+                to={"/bloggerdetails"}
+              >
+                Blog
+              </NavLink>
             </Heading>
             <Heading
               as="h6"
