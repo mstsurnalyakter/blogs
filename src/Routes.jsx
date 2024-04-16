@@ -16,7 +16,7 @@ const ProjectRoutes = () => {
       children: [
         { path: "/", element: <LandingPage /> },
         // { path: "blogdetails", element: <BlogDetails /> },
-        // { path: "contactus", element: <ContactUs /> },
+        { path: "/contactus", element: <ContactUs /> },
         // { path: "bloggerdetails", element: <BloggerDetails /> },
       ],
     },

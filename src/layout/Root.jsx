@@ -6,11 +6,13 @@ import { Outlet } from 'react-router'
 const Root = () => {
   return (
     <>
-    <Header/>
-    <Outlet></Outlet>
-    <Footer/>
+      <Header />
+      <div className="min-h-screen">
+        <Outlet></Outlet>
+      </div>
+      <Footer />
     </>
-  )
+  );
 }
 
 export default Root
