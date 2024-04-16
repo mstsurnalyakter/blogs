@@ -4,7 +4,7 @@ import { Text, Img, Heading } from "./..";
 export default function Footer({ ...props }) {
   return (
     <footer {...props}>
-      <div className="flex flex-col items-center justify-center w-[81%] mt-[30px] gap-[66px] mx-[132px] md:mx-5">
+      <div className="flex flex-col items-center justify-center w-full mt-[30px] gap-[66px] mx-[132px] md:mx-5">
         <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
           <div className="flex flex-col items-start justify-start w-[15%] md:w-full gap-2">
             <div className="flex flex-row justify-start items-start gap-3.5">
